@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/photoapp/styles/style.css" />
+    <link rel="stylesheet" href="/photoapp/styles/font.css" />
+    <link rel="stylesheet" href="/photoapp//fonts/fontawesome/css/all.css" />
+    <script src="/photoapp/scripts/script.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/photoapp/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/photoapp/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/photoapp/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/photoapp/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/photoapp/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ff0000">
+    <meta name="description" content="" />
+    <title>Photo Gallary</title>
+
+    <link rel="stylesheet" href="/photoapp/templates/header.html">
+
+</head>
+
+<body id="start" onload="init()">
+    <header class="header" w3-include-html="/photoapp/templates/header.html"></header>
+    <main class="spacing-layer">
+
+
+        <div id="menu-icons">
+            <div class="menu-icon-text">
+                <img src="/photoapp/img/image-regular.svg" alt="Show open notes">
+                <a href="#index">Photos</a>
+
+            </div>
+            <div class="menu-icon-text">
+                <img src="/photoapp/img/star-regular.svg" alt="Show archive">
+                <a href="#archive">Favorites</a>
+            </div>
+            <div class="menu-icon-text">
+                <img src="/photoapp/img/share-nodes-solid.svg" alt="Show archive">
+                <a href="#archive">Share</a>
+            </div>
+            <div class="menu-icon-text">
+                <img src="img/circle-down-regular.svg" alt="Show archive">
+                <a href="#archive">Archive</a>
+            </div>
+            <div class="menu-icon-text">
+                <img src="img/trash-can-regular.svg" alt="Shwo trash">
+                <a href="#trash">Trash</a>
+            </div>
+        </div>
+
+
+
+
+        <div class="input-div">
+            <img src="/photoapp/img/cloud-arrow-up-solid.svg" alt="Upload or Drag and Drop Images">
+
+            <p>Drag & Drop photos here <br> or <strong>Browse</strong></p>
+
+            <input type="file" class="file" multiple="multiple" accept="image/jpeg, image/png, image/jpg">
+
+        </div>
+
+
+        <div id="imagesarea" class="images-preview">
+
+            <output></output>
+
+        </div>
+
+        <div id="all-images" class="image-style">
+
+        </div>
+
+    </main>
+
+    <div id="modal" class="modal">
+        <div id="close-container"><span class="close">&times;</span></div>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+
+    <footer w3-include-html="/photoapp/templates/footer.html"></footer>
+    <script src="/photoapp/scripts/eventhandling.js"></script>
+</body>
+
+</html>
